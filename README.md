@@ -2,6 +2,15 @@
 
 B2B 세일즈 커뮤니케이션 자료를 Opportunity 단위로 분석해 BANT, MEDDPICC, 이해관계자 온톨로지, 정보 신선도, 민감정보, 후속 접근 전략을 구조화하는 Skillathon 제출물입니다.
 
+## 제출 요약
+
+- 반복 업무: 이메일, 회의록, 녹취록, CRM 메모를 다시 읽고 BANT/MEDDPICC, 이해관계자, 리스크, 후속 전략으로 수작업 정리하는 업무를 줄입니다.
+- Mock data 사용 이유: 실제 고객 커뮤니케이션은 민감정보가 포함될 수 있어, 동일한 입력 구조를 가진 가상 HRD SaaS 영업 사례로 재현했습니다.
+- 실행 순서: README의 실행 프롬프트를 Codex에 입력하거나 데모 HTML을 로컬 서버로 열어 결과를 확인합니다.
+- 예상 출력: Opportunity 단위 JSON, BANT/MEDDPICC 카드, Raw 입력 요약, 온톨로지 그래프, 후속 미팅/이메일 전략입니다.
+- 검증 결과: JSON 구조 검증, 리뷰어용 `validate_sample.py`, JS 문법 검사, CSV 파싱, 비밀값 스캔을 통과했습니다. 현재 실패한 검증은 없습니다.
+- 실제 적용 시 변경할 부분: mock data를 실제 이메일/회의록/STT/CRM 메모로 교체하고, CRM 연동, STT 처리, 사내 보안 정책에 맞춘 민감정보 표시 기준을 조정해야 합니다.
+
 ## 제출 링크에 포함할 정보
 
 - GitHub 저장소 URL: `https://github.com/o-min222/skillathon-sales-discovery-skill`
