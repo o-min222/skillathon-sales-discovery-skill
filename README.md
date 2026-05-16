@@ -13,6 +13,22 @@ B2B 세일즈 커뮤니케이션 자료를 Opportunity 단위로 분석해 BANT,
 - 데모 데이터: [`sales-discovery-mapper/references/dashboard-output-example.json`](sales-discovery-mapper/references/dashboard-output-example.json)
 - 검증 스크립트: [`sales-discovery-mapper/scripts/validate_output.py`](sales-discovery-mapper/scripts/validate_output.py)
 
+## 리뷰어 빠른 확인 경로
+
+리뷰어가 제출물의 입력, Skill, 스키마, 검증, 출력, 스크린샷을 바로 확인할 수 있도록 아래 경로도 함께 제공합니다. `sales-discovery-mapper/`가 실제 Codex 설치용 Skill 본체이고, `skills/sales-discovery-mapper/`는 리뷰어가 기대하는 제출 구조에 맞춘 확인용 경로입니다.
+
+| 확인 항목 | 경로 |
+| --- | --- |
+| 제출 설명 | [`README.md`](README.md) |
+| Skill 본체 | [`sales-discovery-mapper/SKILL.md`](sales-discovery-mapper/SKILL.md) |
+| 리뷰어용 Skill 경로 | [`skills/sales-discovery-mapper/SKILL.md`](skills/sales-discovery-mapper/SKILL.md) |
+| 데이터 스키마 | [`skills/sales-discovery-mapper/references/data-schema.md`](skills/sales-discovery-mapper/references/data-schema.md) |
+| 평가 체크리스트 | [`skills/sales-discovery-mapper/references/eval-checklist.md`](skills/sales-discovery-mapper/references/eval-checklist.md) |
+| 검증 스크립트 | [`skills/sales-discovery-mapper/scripts/validate_sample.py`](skills/sales-discovery-mapper/scripts/validate_sample.py) |
+| Mock 입력 CSV | [`data/mock/sample.csv`](data/mock/sample.csv) |
+| 예시 리포트 | [`outputs/example-report.md`](outputs/example-report.md) |
+| 대표 스크린샷 | [`screenshots/demo.png`](screenshots/demo.png) |
+
 ## 해결하려는 문제
 
 B2B 세일즈 담당자는 이메일, 회의록, 녹취록, CRM 메모, 메신저 대화 등 여러 채널에서 고객과 충분히 소통하지만, 실제 딜 리뷰 시점에는 BANT와 MEDDPICC 정보를 다시 수작업으로 정리해야 합니다. 이 Skill은 raw 커뮤니케이션 자료에서 확인된 사실, 추론, 미확인 항목을 분리하고 다음 소통에서 무엇을 확인해야 하는지까지 제안합니다.
@@ -195,6 +211,21 @@ sales-discovery-mapper/
 │   └── app.js
 └── scripts/
     └── validate_output.py
+skills/sales-discovery-mapper/
+├── SKILL.md
+├── references/
+│   ├── data-schema.md
+│   ├── eval-checklist.md
+│   ├── dashboard-output-example.json
+│   └── mock-data.md
+└── scripts/
+    └── validate_sample.py
+data/mock/
+└── sample.csv
+outputs/
+└── example-report.md
+screenshots/
+└── demo.png
 install-codex-skill.sh
 ```
 
@@ -212,6 +243,12 @@ python3 -m http.server 8000
 
 ```bash
 python3 sales-discovery-mapper/scripts/validate_output.py sales-discovery-mapper/references/dashboard-output-example.json
+```
+
+리뷰어용 경로에서도 같은 검증을 실행할 수 있습니다.
+
+```bash
+python3 skills/sales-discovery-mapper/scripts/validate_sample.py
 ```
 
 ```bash

@@ -1,0 +1,6 @@
+id,type,date,channel,title,participants,raw_excerpt
+comm_email_001,email_thread,2026-05-03,email,Re: 디지털 역량 교육 플랫폼 검토 관련,"김서연(HRD담당); 박민준(HRD본부장); 영업 담당자","김서연: 사내 교육 체계는 어느 정도 잡혀 있지만 디지털 전환/AI 교육은 사업부마다 편차가 큽니다. 해외 법인도 함께 봐야 해서 글로벌 콘텐츠 커버리지가 중요합니다. 올해 예산을 바로 새로 잡을 수 있는지는 확인이 필요하고, HRD 혁신 과제 예산 일부는 검토 가능합니다."
+comm_meeting_001,meeting_notes,2026-05-07,video_meeting,HRD 및 L&D 디스커버리 미팅,"김서연(HRD); 이지훈(L&D); 영업 담당자; 세일즈 엔지니어","김서연: 직무군별 교육 과정을 표준화하고 싶습니다. 이지훈: 학습 참여율이 부서장에게 잘 보이지 않습니다. 고객은 SSO, 기존 LMS 연동, 수료 데이터 연동 가능 여부를 질문했습니다. 이지훈 매니저는 PoC 사용자 모집을 도와줄 수 있다고 했습니다."
+comm_transcript_001,transcript_excerpt,2026-05-10,demo_call,데모콜 녹취 일부,"이지훈(L&D); 최은지(IT); 김서연(HRD); 영업 담당자","00:03:45 이지훈: 부서별로 어떤 과정이 실제로 소비되는지 보는 게 중요합니다. 00:11:02 최은지: 개인정보 처리 위치와 SSO 방식은 꼭 확인해야 합니다. 00:15:37 이지훈: PoC를 한다면 HR, IT, 생산기술 쪽에서 30명 정도 파일럿을 잡아볼 수 있습니다."
+comm_crm_001,crm_note,2026-04-15,crm,예산 및 구매 검토 메모,"영업 담당자","Stage: PoC 논의 중. Amount signal: HRD 학습 혁신 예산 약 1억 원 언급. 확정 예산은 아님. Close target: 가능하면 Q3 시작 희망. Risk: 구매팀/보안 검토 4-6주 걸릴 수 있음. Economic buyer와 procurement owner는 미확인."
+comm_slack_001,internal_chat,2026-05-12,slack,Account 팀 다음 액션,"AE; CSM; 세일즈 엔지니어","AE: 이지훈 매니저가 PoC 체크리스트를 두 번 요청했고 파일럿 사용자도 모아보겠다고 했습니다. Champion 후보로 볼 수 있습니다. CSM: Economic Buyer가 누구인지 아직 모릅니다. SE: 다음 미팅에서 보안 담당자와 구매 프로세스 확인이 필요합니다."
