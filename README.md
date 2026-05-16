@@ -26,6 +26,39 @@ Codex에서 다음처럼 요청합니다.
 
 입력으로 이메일 원문, 회의록 텍스트, 녹취록 텍스트, CRM 메모, Slack/카톡 대화, 첨부 문서 요약 또는 오디오 파일 설명을 제공합니다. 자료가 충분하면 바로 분석하고, 필수 정보가 부족하면 결과 마지막에 추가 확인 질문과 후속 전략을 정리합니다.
 
+## 내 Codex에 설치해서 사용하기
+
+다른 사용자가 자기 Codex에서 이 Skill을 사용하려면 저장소를 clone한 뒤 `sales-discovery-mapper` 폴더를 Codex skills 폴더로 복사합니다.
+
+```bash
+git clone https://github.com/o-min222/skillathon-sales-discovery-skill.git
+cd skillathon-sales-discovery-skill
+./install-codex-skill.sh
+```
+
+이미 같은 이름의 Skill이 설치되어 있다면 아래처럼 덮어쓸 수 있습니다.
+
+```bash
+./install-codex-skill.sh --force
+```
+
+수동 설치도 가능합니다.
+
+```bash
+mkdir -p ~/.codex/skills
+cp -R sales-discovery-mapper ~/.codex/skills/
+```
+
+설치 후에는 새 Codex 채팅을 열고 아래처럼 요청합니다.
+
+```text
+세일즈 분석을 진행해줘.
+
+[이메일/회의록/회의 녹음 STT txt/CRM 메모를 여기에 붙여넣기]
+```
+
+Codex가 Skill을 자동으로 감지하면 `sales-discovery-mapper/SKILL.md`의 워크플로에 따라 Opportunity 단위 분석, BANT/MEDDPICC, Raw 입력 요약, 온톨로지 그래프용 JSON, 후속 전략을 생성합니다.
+
 ## Raw 커뮤니케이션 자료
 
 실제 운영에서 Raw 커뮤니케이션 자료는 고객과 주고받은 이메일 원문, 미팅 회의록, 회의/데모콜 녹취록, CRM 메모, 내부 Slack/카톡 메모처럼 아직 정리되지 않은 업무 기록입니다. 이 Skill은 해당 원문을 바로 BANT/MEDDPICC으로 덮어쓰지 않고, 먼저 원문 출처를 `communications` 레코드로 보존한 뒤 요약과 evidence를 연결합니다.
@@ -127,6 +160,7 @@ sales-discovery-mapper/
 │   └── app.js
 └── scripts/
     └── validate_output.py
+install-codex-skill.sh
 ```
 
 ## 데모 실행
