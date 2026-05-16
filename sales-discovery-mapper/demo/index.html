@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sales Discovery Mapper Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Skillathon 데모</p>
+        <h1>Sales Discovery Mapper</h1>
+      </div>
+      <div class="meta-pill" id="generatedAt">불러오는 중</div>
+    </header>
+
+    <main>
+      <section class="workspace-grid">
+        <div>
+          <section class="summary-grid">
+        <article class="summary-panel interactive-panel" id="accountPanel" role="button" tabindex="0" data-detail-id="account">
+          <span class="label">고객사</span>
+          <strong id="accountName"></strong>
+          <p id="accountContext"></p>
+          <span class="panel-action">세부내용 보기</span>
+        </article>
+        <article class="summary-panel interactive-panel" id="opportunityPanel" role="button" tabindex="0" data-detail-id="opportunity">
+          <span class="label">Opportunity</span>
+          <strong id="opportunityName"></strong>
+          <p id="opportunityContext"></p>
+          <span class="panel-action">세부내용 보기</span>
+        </article>
+        <article class="summary-panel interactive-panel" id="qualityPanel" role="button" tabindex="0" data-detail-id="quality">
+          <span class="label">데이터 품질</span>
+          <strong id="confidence"></strong>
+          <p id="qualityNotes"></p>
+          <span class="panel-action">세부내용 보기</span>
+        </article>
+      </section>
+
+      <section class="section-block">
+        <div class="section-head">
+          <h2>BANT</h2>
+          <span>예산 · 권한 · 니즈 · 일정</span>
+        </div>
+        <div class="card-grid" id="bantCards"></div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-head">
+          <h2>Raw 입력 자료</h2>
+          <span>원문과 요약 확인</span>
+        </div>
+        <div class="communication-grid" id="communicationCards"></div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-head">
+          <h2>MEDDPICC</h2>
+          <span>근거 중심 Opportunity 리뷰</span>
+        </div>
+        <div class="card-grid meddpicc-grid" id="meddpiccCards"></div>
+      </section>
+
+      <section class="split-section">
+        <div class="section-block">
+          <div class="section-head">
+          <h2>온톨로지</h2>
+          <span>노드와 관계 근거</span>
+          </div>
+          <div class="graph-toolbar" id="graphFilters"></div>
+          <div class="relationship-map" id="relationshipMap"></div>
+        </div>
+
+        <div class="section-block">
+          <div class="section-head">
+          <h2>전략</h2>
+          <span>다음 세일즈 액션</span>
+          </div>
+          <div id="strategy"></div>
+        </div>
+      </section>
+        </div>
+
+        <aside class="detail-panel" id="detailPanel" aria-live="polite">
+          <div class="detail-empty">
+            <span class="label">상세 패널</span>
+            <strong>카드를 선택하세요</strong>
+            <p>고객사, Opportunity, Stakeholder, BANT/MEDDPICC, 온톨로지 노드를 클릭하면 근거와 연결 관계를 확인할 수 있습니다.</p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
