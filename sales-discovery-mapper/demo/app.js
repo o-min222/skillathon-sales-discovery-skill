@@ -433,9 +433,44 @@ function bindInteractions() {
   });
 }
 
+function getInitialState() {
+  const params = new URLSearchParams(window.location.search);
+  return {
+    detail: params.get("detail") || "account",
+    filter: params.get("filter") || "all",
+    capture: params.get("capture") || ""
+  };
+}
+
+function scrollToHash() {
+  if (!window.location.hash) return;
+  const target = document.querySelector(window.location.hash);
+  if (!target) return;
+  requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+}
+
+function applyCaptureMode(sectionId) {
+  if (!sectionId) return;
+  document.body.classList.add("capture-mode");
+  const sections = document.querySelectorAll(".workspace-grid > div > section");
+  sections.forEach((section) => {
+    const isRequested = section.id === sectionId;
+    const isSplitDetail = ["ontology-graph", "strategy-panel"].includes(sectionId) && section.id === "relationship";
+    section.classList.toggle("capture-hidden", !isRequested && !isSplitDetail);
+  });
+  if (sectionId === "ontology-graph") {
+    document.getElementById("strategy-panel")?.classList.add("capture-hidden");
+  }
+  if (sectionId === "strategy-panel") {
+    document.getElementById("ontology-graph")?.classList.add("capture-hidden");
+  }
+}
+
 async function main() {
   const response = await fetch(dataUrl);
   appData = await response.json();
+  const initialState = getInitialState();
+  graphFilter = initialState.filter;
 
   document.getElementById("generatedAt").textContent = appData.metadata.analysis_generated_at;
   document.getElementById("accountName").textContent = appData.account.name;
@@ -452,7 +487,9 @@ async function main() {
   renderRelationshipMap();
   renderStrategy(appData.strategy);
   bindInteractions();
-  showDetail("account");
+  showDetail(initialState.detail);
+  applyCaptureMode(initialState.capture);
+  scrollToHash();
 }
 
 main().catch((error) => {

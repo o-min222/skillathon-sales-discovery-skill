@@ -9,7 +9,7 @@ B2B 세일즈 커뮤니케이션 자료를 Opportunity 단위로 분석해 BANT,
 - SKILL.md 경로: [`sales-discovery-mapper/SKILL.md`](sales-discovery-mapper/SKILL.md)
 - references 폴더 경로: [`sales-discovery-mapper/references/`](sales-discovery-mapper/references/)
 - 데모 화면: [`sales-discovery-mapper/demo/index.html`](sales-discovery-mapper/demo/index.html)
-- 데모 스크린샷: [`sales-discovery-mapper/assets/demo-dashboard.png`](sales-discovery-mapper/assets/demo-dashboard.png)
+- 데모 스크린샷: [`sales-discovery-mapper/assets/`](sales-discovery-mapper/assets/)
 - 데모 데이터: [`sales-discovery-mapper/references/dashboard-output-example.json`](sales-discovery-mapper/references/dashboard-output-example.json)
 - 검증 스크립트: [`sales-discovery-mapper/scripts/validate_output.py`](sales-discovery-mapper/scripts/validate_output.py)
 
@@ -147,7 +147,29 @@ Skill은 대시보드 UI로 전환하기 쉬운 구조화 데이터를 생성합
 
 ## 데모 스크린샷
 
-![Sales Discovery Mapper dashboard screenshot](sales-discovery-mapper/assets/demo-dashboard.png)
+전체 대시보드:
+
+![Sales Discovery Mapper dashboard overview](sales-discovery-mapper/assets/demo-overview.png)
+
+BANT 상세:
+
+![BANT detail screenshot](sales-discovery-mapper/assets/demo-bant-detail.png)
+
+Raw 입력 자료와 원문/요약 상세:
+
+![Raw input detail screenshot](sales-discovery-mapper/assets/demo-raw-inputs.png)
+
+MEDDPICC 상세:
+
+![MEDDPICC detail screenshot](sales-discovery-mapper/assets/demo-meddpicc-detail.png)
+
+온톨로지 그래프와 관계 근거:
+
+![Ontology graph screenshot](sales-discovery-mapper/assets/demo-ontology-graph.png)
+
+후속 전략:
+
+![Strategy screenshot](sales-discovery-mapper/assets/demo-strategy.png)
 
 ## 파일 구조
 
@@ -155,6 +177,12 @@ Skill은 대시보드 UI로 전환하기 쉬운 구조화 데이터를 생성합
 sales-discovery-mapper/
 ├── SKILL.md
 ├── assets/
+│   ├── demo-overview.png
+│   ├── demo-bant-detail.png
+│   ├── demo-raw-inputs.png
+│   ├── demo-meddpicc-detail.png
+│   ├── demo-ontology-graph.png
+│   ├── demo-strategy.png
 │   └── demo-dashboard.png
 ├── references/
 │   ├── schema.md

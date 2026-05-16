@@ -58,6 +58,19 @@ main {
   padding: 24px 28px 40px;
 }
 
+.capture-hidden {
+  display: none !important;
+}
+
+body.capture-mode .topbar {
+  min-height: 88px;
+  padding: 20px 36px;
+}
+
+body.capture-mode main {
+  padding-top: 18px;
+}
+
 .eyebrow,
 .label {
   color: var(--muted);
@@ -434,6 +447,10 @@ li {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 18px;
+}
+
+body.capture-mode .detail-panel {
+  top: 12px;
 }
 
 .detail-empty,
