@@ -9,6 +9,7 @@ B2B 세일즈 커뮤니케이션 자료를 Opportunity 단위로 분석해 BANT,
 - SKILL.md 경로: [`sales-discovery-mapper/SKILL.md`](sales-discovery-mapper/SKILL.md)
 - references 폴더 경로: [`sales-discovery-mapper/references/`](sales-discovery-mapper/references/)
 - 데모 화면: [`sales-discovery-mapper/demo/index.html`](sales-discovery-mapper/demo/index.html)
+- 데모 스크린샷: [`sales-discovery-mapper/assets/demo-dashboard.png`](sales-discovery-mapper/assets/demo-dashboard.png)
 - 데모 데이터: [`sales-discovery-mapper/references/dashboard-output-example.json`](sales-discovery-mapper/references/dashboard-output-example.json)
 - 검증 스크립트: [`sales-discovery-mapper/scripts/validate_output.py`](sales-discovery-mapper/scripts/validate_output.py)
 
@@ -144,11 +145,17 @@ Skill은 대시보드 UI로 전환하기 쉬운 구조화 데이터를 생성합
 - Raw 입력 자료 카드와 원문/요약 상세 패널
 - 카드형 노드와 관계 근거를 확인할 수 있는 온톨로지 그래프 뷰
 
+## 데모 스크린샷
+
+![Sales Discovery Mapper dashboard screenshot](sales-discovery-mapper/assets/demo-dashboard.png)
+
 ## 파일 구조
 
 ```text
 sales-discovery-mapper/
 ├── SKILL.md
+├── assets/
+│   └── demo-dashboard.png
 ├── references/
 │   ├── schema.md
 │   ├── mock-data.md
